@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Quiz Game</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Question {{ qnum }} of {{ total }}</h2>
+        <p>{{ question }}</p>
+        <form action="/question" method="post">
+            {% for option in options %}
+            <label>
+                <input type="radio" name="option" value="{{ option }}" required> {{ option }}
+            </label><br>
+            {% endfor %}
+            <button type="submit">Next</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quiz Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>
