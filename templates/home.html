@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Quiz Game</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Welcome to the Quiz Game</h2>
+        <p>Test your knowledge with some fun trivia questions!</p>
+        <form action="/question" method="get">
+            <button type="submit">Start Quiz</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quiz Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>
