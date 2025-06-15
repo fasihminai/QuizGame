@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Quiz Game</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: {{ score }} / {{ total }}</p>
+        <a href="/">Try Again</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quiz Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>
